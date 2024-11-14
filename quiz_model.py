@@ -20,4 +20,3 @@ class QuizModel(db.Model):
     @classmethod
     def get_quiz(cls, quiz_id):
         return cls.query.get(quiz_id)
-    

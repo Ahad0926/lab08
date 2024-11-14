@@ -9,8 +9,12 @@ def test_create_quiz(mock_create_quiz, client):
 
     response = client.post(
         '/api/quizzes',
-        json={"title": "Sample Quiz", "questions":
-               [{"text": "Q1?", "answer": "A1"}]}
+        json={
+            "title": "Sample Quiz",
+            "questions": [
+                {"text": "Q1?", "answer": "A1"}
+            ]
+        }
     )
 
     assert response.status_code == 201
@@ -46,4 +50,3 @@ def test_submit_quiz(mock_evaluate_quiz, client):
     assert response.status_code == 200
     assert response.json == {"message": "Quiz evaluated", "score": 1}
     mock_evaluate_quiz.assert_called_once_with(1, ["A1"])
-    

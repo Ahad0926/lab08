@@ -25,7 +25,7 @@ def get_quiz(quiz_id):
     if not quiz:
         return jsonify({"error": "Quiz not found."}), 404
 
-    return jsonify({"id": quiz.id, "title": quiz.title, 
+    return jsonify({"id": quiz.id, "title": quiz.title,
                     "questions": quiz.questions}), 200
 
 
