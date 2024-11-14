@@ -2,4 +2,3 @@ Flask
 SQLAlchemy
 Flask-SQLAlchemy
 pytest
-unittest.mock
