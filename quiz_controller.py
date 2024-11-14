@@ -25,7 +25,8 @@ def get_quiz(quiz_id):
     if not quiz:
         return jsonify({"error": "Quiz not found."}), 404
 
-    return jsonify({"id": quiz.id, "title": quiz.title, "questions": quiz.questions}), 200
+    return jsonify({"id": quiz.id, "title": quiz.title, 
+                    "questions": quiz.questions}), 200
 
 
 @quiz_bp.route('/api/quizzes/<int:quiz_id>/submit', methods=['POST'])

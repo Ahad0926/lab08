@@ -26,3 +26,4 @@ class QuizService:
                 score += 1
 
         return score
+    

@@ -7,7 +7,7 @@ class QuizModel(db.Model):
 
     id = Column(Integer, primary_key=True)
     title = Column(String, nullable=False)
-    questions = Column(PickleType, nullable=False)  # Stores a list of questions
+    questions = Column(PickleType, nullable=False)
 
     def __init__(self, title, questions):
         self.title = title
@@ -20,3 +20,4 @@ class QuizModel(db.Model):
     @classmethod
     def get_quiz(cls, quiz_id):
         return cls.query.get(quiz_id)
+    
