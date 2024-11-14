@@ -1,6 +1,6 @@
 # src/models/quiz_model.py
 from sqlalchemy import Column, Integer, String, PickleType
-from src.database import db
+from database import db
 
 class QuizModel(db.Model):
     __tablename__ = 'quizzes'
