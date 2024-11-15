@@ -7,6 +7,10 @@ on:
 
 jobs:
   analyze:
+    permissions:
+        actions: read
+        security-events: write
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
