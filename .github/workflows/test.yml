@@ -1,5 +1,5 @@
 name: CI/CD Pipeline - Testing
-on: 
+on:
   [push, pull_request]
 
 jobs:
@@ -19,3 +19,8 @@ jobs:
 
       - name: Run tests
         run: pytest
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: 1557aa9e-7e11-4ed6-a911-ca2914029f90
